@@ -23,6 +23,7 @@ public class RectangleTests {
                     "Test 1: Default values are wrong.",
                     rectangle.getHeight() == 0 && rectangle.getWidth() == 0
             );
+            System.out.println("Test 1 completed successfully.");
         } catch (AssertionError assertionError) {
             System.out.println("Test 1: Exception ... " + assertionError.getMessage());
         }
