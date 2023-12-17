@@ -81,4 +81,24 @@ public class RectangleTests {
             System.out.println("Test 4: Exception ... " + assertionError.getMessage());
         }
     }
+    @Test
+    public void createThenModifyAttributesTest() {
+        rectangle = new Rectangle();
+        try {
+            for (int i = 0 ; i < rectangles.length ; i++) {
+                rectangles[i] = new Rectangle(2 * i, 3 * i);
+                rectangles[i].setHeight(11 * i);
+                rectangles[i].setWidth(7 * i);
+                assertTrue (
+                        "Test 5: Modified values are wrong.",
+                        rectangles[i].getHeight() == (11 * i)
+                                && rectangles[i].getWidth() == (7 * i)
+                                && rectangles[i].getArea() == (77 * i * i)
+                );
+            }
+            System.out.println("Test 5 completed successfully.");
+        } catch (AssertionError assertionError) {
+            System.out.println("Test 5: Exception ... " + assertionError.getMessage());
+        }
+    }
 }
