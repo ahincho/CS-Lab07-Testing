@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RectangleTests {
     private Rectangle rectangle;
-    private Rectangle[] rectangles = new Rectangle[5];
+    private final Rectangle[] rectangles = new Rectangle[5];
     @Before
     public void testSetup() {
         System.out.println("Setup for test complete.");
