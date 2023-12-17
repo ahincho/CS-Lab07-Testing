@@ -68,7 +68,7 @@ public class RectangleTests {
         rectangle = new Rectangle();
         try {
             for (int i = 0 ; i < rectangles.length - 1 ; i++) {
-                rectangle = new Rectangle(2 * i, 3 * i);
+                rectangles[i] = new Rectangle(2 * i, 3 * i);
                 assertTrue (
                         "Test 4: Initial values are wrong.",
                         rectangles[i].getHeight() == (2 * i)
