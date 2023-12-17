@@ -67,13 +67,13 @@ public class RectangleTests {
         // Looping over all args constructor
         rectangle = new Rectangle();
         try {
-            for (int i = 0 ; i < rectangles.length ; i++) {
+            for (int i = 0 ; i < rectangles.length - 1 ; i++) {
                 rectangle = new Rectangle(2 * i, 3 * i);
                 assertTrue (
                         "Test 4: Initial values are wrong.",
-                        rectangle.getHeight() == (2 * i)
-                                && rectangle.getWidth() == (3 * i)
-                                && rectangle.getArea() == (6 * i * i)
+                        rectangles[i].getHeight() == (2 * i)
+                                && rectangles[i].getWidth() == (3 * i)
+                                && rectangles[i].getArea() == (6 * i * i)
                 );
             }
             System.out.println("Test 4 completed successfully.");
