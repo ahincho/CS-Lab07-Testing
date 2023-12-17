@@ -62,4 +62,23 @@ public class RectangleTests {
             System.out.println("Test 3: Exception ... " + assertionError.getMessage());
         }
     }
+    @Test
+    public void allArgsConstructorLoopTest() {
+        // Looping over all args constructor
+        rectangle = new Rectangle();
+        try {
+            for (int i = 0 ; i < rectangles.length ; i++) {
+                rectangle = new Rectangle(2 * i, 3 * i);
+                assertTrue (
+                        "Test 4: Initial values are wrong.",
+                        rectangle.getHeight() == (2 * i)
+                                && rectangle.getWidth() == (3 * i)
+                                && rectangle.getArea() == (6 * i * i)
+                );
+            }
+            System.out.println("Test 4 completed successfully.");
+        } catch (AssertionError assertionError) {
+            System.out.println("Test 4: Exception ... " + assertionError.getMessage());
+        }
+    }
 }
