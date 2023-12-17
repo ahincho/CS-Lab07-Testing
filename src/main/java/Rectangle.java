@@ -25,7 +25,7 @@ public class Rectangle {
     }
     // Setters
     public void setHeight(int height) {
-        this.height = height;
+        this.height = height * 2;
     }
     public void setWidth(int width) {
         this.width = width;
