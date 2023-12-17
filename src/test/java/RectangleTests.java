@@ -28,4 +28,21 @@ public class RectangleTests {
             System.out.println("Test 1: Exception ... " + assertionError.getMessage());
         }
     }
+    @Test
+    public void NoArgsConstructorAreaTest() {
+        // No args constructor automatically set attributes to zero
+        // So rectangle area is computed as zero as well
+        rectangle = new Rectangle();
+        try {
+            assertTrue (
+                    "Test 2: Default values and area are wrong.",
+                    rectangle.getHeight() == 0
+                            && rectangle.getWidth() == 0
+                            && rectangle.getArea() == 0
+            );
+            System.out.println("Test 2 completed successfully.");
+        } catch (AssertionError assertionError) {
+            System.out.println("Test 2: Exception ... " + assertionError.getMessage());
+        }
+    }
 }
