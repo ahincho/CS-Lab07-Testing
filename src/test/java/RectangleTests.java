@@ -29,7 +29,7 @@ public class RectangleTests {
         }
     }
     @Test
-    public void NoArgsConstructorAreaTest() {
+    public void noArgsConstructorAreaTest() {
         // No args constructor automatically set attributes to zero
         // So rectangle area is computed as zero as well
         rectangle = new Rectangle();
