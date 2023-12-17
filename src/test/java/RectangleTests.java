@@ -124,4 +124,8 @@ public class RectangleTests {
             System.out.println("Test 6: Exception ... " + assertionError.getMessage());
         }
     }
+
+    public static void main(String[] args) {
+        org.junit.runner.JUnitCore.main("RectangleTests");
+    }
 }
