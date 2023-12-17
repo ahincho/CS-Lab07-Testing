@@ -67,7 +67,7 @@ public class RectangleTests {
         // Looping over all args constructor
         rectangle = new Rectangle();
         try {
-            for (int i = 0 ; i < rectangles.length - 1 ; i++) {
+            for (int i = 0 ; i < rectangles.length ; i++) {
                 rectangles[i] = new Rectangle(2 * i, 3 * i);
                 assertTrue (
                         "Test 4: Initial values are wrong.",
