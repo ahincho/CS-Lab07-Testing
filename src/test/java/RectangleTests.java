@@ -45,4 +45,21 @@ public class RectangleTests {
             System.out.println("Test 2: Exception ... " + assertionError.getMessage());
         }
     }
+    @Test
+    public void allArgsConstructorTest() {
+        // We are using no args constructor then all args constructor
+        rectangle = new Rectangle();
+        try {
+            rectangle = new Rectangle(10, 20);
+            assertTrue (
+                    "Test 3: Initial values are wrong.",
+                    rectangle.getHeight() == 10
+                            && rectangle.getWidth() == 20
+                            && rectangle.getArea() == 200
+            );
+            System.out.println("Test 3 completed successfully.");
+        } catch (AssertionError assertionError) {
+            System.out.println("Test 3: Exception ... " + assertionError.getMessage());
+        }
+    }
 }
